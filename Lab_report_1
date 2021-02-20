@@ -1,0 +1,27 @@
+def data(name, course, number, prelims, midterms, finals, ):
+    # FORMULA
+    Final_average = (float(prelims) + float(midterms) + float(finals)) / 3
+    Final_averages = round(Final_average, 2)
+
+    # REMARKS
+    Happy = ("Good Job \U0001F600")
+    Laugh = ("Dobetter next time \U0001F606")
+    Sad = ("Study Harderu \u2639\uFE0F")
+
+    if Final_average > 70:
+        remarks = Happy
+    elif Final_average == 70:
+        remarks = Laugh
+    else:
+        remarks = Sad
+
+    # RESULTS
+    print('#' * 50, "RESULTS", '#' * 50)
+    print(("Name: " + name),
+          ("\nStudent ID number: " + number),
+          ("\nCourse: " + course),
+          ("\nPreliminary Grade: " + prelims),
+          ("\nMidterm Grade: " + midterms),
+          ("\nFinal Grade: " + finals),
+          ("\nSemestral Grade: " + str(Final_averages)),
+          ("\nRemarks: " + remarks))
