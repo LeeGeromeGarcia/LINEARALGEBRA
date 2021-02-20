@@ -25,3 +25,11 @@ def data(name, course, number, prelims, midterms, finals, ):
           ("\nFinal Grade: " + finals),
           ("\nSemestral Grade: " + str(Final_averages)),
           ("\nRemarks: " + remarks))
+
+    # INFORMATION
+data(input("Name:"),
+     input("Student ID number:"),
+     input("Course:"),
+     input("What is your Preliminary grade: "),
+     input("What is your Midterms grade: "),
+     input("What is your Finals grade: "))
