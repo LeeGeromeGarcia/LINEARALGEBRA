@@ -1,0 +1,79 @@
+import numpy as np
+import matplotlib.pyplot as plt
+import matplotlib
+
+#Declare 5 different vectors
+VectorA = np.array([7, 18])
+VectorB = np.array([13, 5])
+VectorC = np.array([-5, 7])
+VectorD = np.array([12, 5])
+VectorE= np.array([-5, 8])
+
+#Addition,Subtraction
+Addition = np.add(VectorA, VectorB)
+print('The Sum of Vector A and Vector B is', Addition)
+Subtraction = np.subtract(Addition,VectorC)
+print('The Difference of', Addition, 'and Vector C is', Subtraction)
+
+
+#Multiplication, Division
+Multiplication = np.multiply(VectorB, VectorC)
+print('The Product of Vector B and Vector C is', Multiplication)
+Division = np.divide(Multiplication, VectorD)
+print('The Quotient of', Multiplication, ' and Vector D is', Division)
+
+
+#Squaring,Square root)
+Squaring = np.square(VectorD)
+print('The Square of Vector D is', Squaring)
+Squareroot = np.sqrt(Squaring)
+print('The Square Root of', Squaring, 'is', Squareroot)
+
+
+
+#Summation
+Summation = np.sum(VectorE)
+print('The Summation of Vector E is', Summation)
+print('_'*55)
+
+#Visualize
+plt.title('Visualize of Data')
+plt.xlim(-50, 50)
+plt.ylim(-50, 50)
+
+#Vector
+plt.scatter(VectorA [0], VectorA [1], label='Vector 1', c='Red')
+plt.scatter(VectorB [0], VectorB [1], label='Vector 2', c='Blue')
+plt.scatter(VectorC [0], VectorC [1], label='Vector 3', c='Lime')
+plt.scatter(VectorD [0], VectorD[1], label='Vector 4', c='Orange')
+plt.scatter(VectorE [0], VectorE [1], label='Vector 5', c='Yellow')
+
+#Results
+plt.scatter(Addition[0],            Addition[1],         label='Addition',          c='orchid')
+plt.scatter(Subtraction[0],         Subtraction[1],      label='Subtraction',       c='magenta')
+plt.scatter(Division[0],            Division[1],         label='Division',          c='darkmagenta')
+plt.scatter(Squaring[0],            Squaring[1],         label='Squaring',          c='purple')
+plt.scatter(Squareroot[0],          Squareroot[1],       label='Squareroot',        c='crimson')
+
+#Results
+plt.scatter(Addition[0],            Addition[1],         label='Addition',          c='Grey')
+plt.scatter(Subtraction[0],         Subtraction[1],      label='Subtraction',       c='Lightgray')
+plt.scatter(Division[0],            Division[1],         label='Division',          c='Lightgrey')
+plt.scatter(Squaring[0],            Squaring[1],         label='Squaring',          c='Silver')
+plt.scatter(Squareroot[0],          Squareroot[1],       label='Squareroot',        c='Gainsboro')
+
+#Resultant Vector
+plt.quiver(VectorA[0], VectorA [1], VectorB[0], VectorB[1], angles='xy', scale_units='xy', scale=1, color='Aqua')
+plt.quiver(0, 0, VectorA [0], VectorA [1], angles='xy', scale_units='xy', scale=1, color='Cyan')
+VectorF = VectorA + VectorB
+plt.quiver(0, 0, VectorF[0], VectorF[1], angles='xy', scale_units='xy', scale=1, color='Turquoise')
+
+R_mag = np.sqrt(np.sum(VectorA**2+VectorB**2))
+rise = VectorF[1]
+run = VectorF [0]
+slope = rise/run
+print('Slope is: ', slope)
+
+plt.grid()
+plt.legend()
+plt.show()
