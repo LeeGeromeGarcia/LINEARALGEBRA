@@ -1,0 +1,27 @@
+#TASK 1
+
+import numpy as np
+import matplotlib.pyplot as plt
+
+VecX = np.array([2,1])
+VecY = np.array([-2,1])
+
+S = np.arange(-3,2,1)
+
+ScalarA, ScalarB = np.meshgrid(S,S)
+
+spanRx = ScalarA * VecX[0] + ScalarB * VecY[0]
+spanRy = ScalarA * VecX[1] + ScalarB * VecY[1]
+plt.scatter(spanRx,spanRy, s=10, alpha=1, color='magenta')
+
+plt.xlim(-40, 40)
+plt.ylim(-40, 40)
+
+plt.axhline(y=0, color='k')
+plt.axvline(x=0, color='k')
+
+
+plt.title("Activity 3.1")
+plt.grid()
+plt.show()
+
