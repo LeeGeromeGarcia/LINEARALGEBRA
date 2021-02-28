@@ -1,0 +1,38 @@
+#TASK2
+import numpy as np
+import matplotlib.pyplot as plt
+
+
+VecX = np.array([2,4])
+VecY = np.array([2,-4])
+
+a = np.arange(-6,10,1)
+b = np.arange(-7,9,1)
+c = np.arange(-8,8,1)
+
+scalar1, scalar2 = np.meshgrid(a,a)
+scalar3, scalar4 = np.meshgrid(b,b)
+scalar5, scalar6 = np.meshgrid(c,c)
+VecZ = VecX + VecY
+
+
+
+
+spanRxX = scalar1 * VecX[0] + scalar2 * VecY[0]
+spanRyX = scalar1 * VecX[1] + scalar2 * VecY[1]
+spanRxY = scalar3 * VecX[0] + scalar4 * VecY[0]
+spanRyY = scalar3 * VecX[1] + scalar4 * VecY[1]
+spanRxZ = scalar5 * VecX[0] + scalar6 * VecY[0]
+spanRyZ = scalar5 * VecX[1] + scalar6 * VecY[1]
+
+plt.scatter(spanRxX, spanRyX, s=10, alpha=1, color='crimson')
+plt.scatter(spanRxY, spanRyY, s=10, alpha=1, color='brown')
+plt.scatter(spanRxZ, spanRyZ, s=10, alpha=1, color='pink')
+
+plt.xlim(-100,100)
+plt.ylim(-100,100)
+plt.axhline(y=0, color='k')
+plt.axvline(x=0, color='k')
+plt.title("Activity 3.2")
+plt.grid()
+plt.show()
