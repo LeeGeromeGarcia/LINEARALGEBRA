@@ -1,0 +1,29 @@
+import numpy as np
+import matplotlib.pyplot as plt
+
+z = np.array([1, 2.5, -0.7])
+x = np.array([-1.2, 1.7,  2.0])
+c = np.array([3, 1.2, -1.2])
+
+answer = ((np.square(z) + np.square(x) + np.square(c)) * (np.divide(np.multiply(z,(np.add(x, (np.multiply(z,x))))),c)))*(np.linalg.norm(z+x+c))
+print('(A**2 + B**2 + C**2)*(A*(B+A*B)/C)*||A + B + C||=',answer)
+
+plt.quiver(z[0], z[1], x[0], x[1], angles='xy', scale_units='xy', scale=1, color='green')
+plt.quiver(z[0] + x[0], z[1] + x[1], c[0], c[1], angles='xy', scale_units='xy', scale=1, color='red')
+v = x + c
+plt.quiver(z[0], z[1], v[0], v[1] ,angles='xy', scale_units='xy', scale=1, color='blue')
+
+R_mag = np.sqrt(np.sum(x**2+c**2))
+rise = c[1]
+run = c[0]
+slope = rise/run
+print('The slope is: ',slope)
+plt.xlim(-5,9)
+plt.ylim(1,10)
+plt.grid()
+plt.legend()
+plt.show()
+
+
+#Reference from Christian Casiño
+#https://github.com/ChristianCasino/Python_activities
