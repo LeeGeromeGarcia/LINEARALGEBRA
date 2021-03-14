@@ -1,0 +1,104 @@
+Vector1 = [(3,2,1,-4)]
+z = []
+
+for numbers in Vector1:
+    for number in numbers:
+        square1 = number **2
+        z.append(square1)
+
+print('Vector 1:                    ',Vector1)
+print('Square of Vector 1 is        ',z)
+print('The sum of all numbers:      ',sum(z))
+print('The square root of the sum:  ',sum(z)**(1/2))
+print('#'*100)
+
+#######################################################################################################################
+
+
+Vector2 = [(3,4,5,-2)]
+x = []
+
+for numbers in Vector2:
+    for number in numbers:
+        square2 = number **2
+        x.append(square2)
+
+print('Vector 2:                    ',Vector2)
+print('Square of Vector 2 is        ',x)
+print('The sum of all numbers:      ',sum(x))
+print('The square root of the sum:  ',sum(x)**(1/2))
+print('#'*100)
+
+
+########################################################################################################################
+
+
+Vector3 = [(2,6,4,3)]
+c = []
+
+for numbers in Vector3:
+    for number in numbers:
+        square3 = number **2
+        c.append(square3)
+
+print('Vector 3:                    ',Vector3)
+print('The square of all numbers    ',c)
+print('The sum of all numbers:      ',sum(c))
+print('The square root of the sum:  ',sum(c)**(1/2))
+print('#'*100)
+
+########################################################################################################################
+
+
+Vector4 = [(5,7,6,9)]
+v = []
+
+for numbers in Vector4:
+    for number in numbers:
+        square4 = number **2
+        v.append(square4)
+
+print('Vector 4:                    ',Vector4)
+print('The square of all numbers    ',v)
+print('The sum of all numbers:      ',sum(v))
+print('The square root of the sum:  ',sum(v)**(1/2))
+print('#'*100)
+
+########################################################################################################################
+
+
+Vector5 = [(4,2,9,6)]
+b = []
+
+for numbers in Vector5:
+    for number in numbers:
+        square5 = number **2
+        b.append(square5)
+
+print('Vector 5:                    ',Vector5)
+print('The square of all numbers    ',b)
+print('The sum of all numbers:      ',sum(b))
+print('The square root of the sum:  ',sum(b)**(1/2))
+print('#'*100)
+
+
+
+########################################################################################################################
+
+
+Vector6 = [(5,3,-1,2)]
+n = []
+
+for numbers in Vector6:
+    for number in numbers:
+        square6 = number **2
+        n.append(square6)
+
+print('Vector 5:                    ',Vector6)
+print('The square of all numbers    ',n)
+print('The sum of all numbers:      ',sum(n))
+print('The square root of the sum:  ',sum(n)**(1/2))
+print('#'*100)
+
+#Reference from Christian Casiño
+#https://github.com/ChristianCasino/Python_activities
